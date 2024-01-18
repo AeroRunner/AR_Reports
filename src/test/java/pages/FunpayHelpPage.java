@@ -7,7 +7,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class FunpayHelpPage {
     SelenideElement rulesContent = $(".page-content-full");
-    public FunpayHelpPage checkRulesTitle(String title){
+
+    public FunpayHelpPage checkRulesTitle(String title) {
         rulesContent.shouldHave(text(title));
         return this;
     }

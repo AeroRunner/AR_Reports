@@ -41,12 +41,13 @@ public class BaseTest {
     void afterEach() {
         Attach.screenshotAs("Last Screen");
         Attach.pageSource();
-        if (!Configuration.browser.equalsIgnoreCase("firefox")){
+        if (!Configuration.browser.equalsIgnoreCase("firefox")) {
             Attach.browserConsoleLogs();
         }
         Attach.addVideo();
         step("Close Browser", () -> {
-            Selenide.closeWebDriver();}
+                    Selenide.closeWebDriver();
+                }
         );
     }
 }

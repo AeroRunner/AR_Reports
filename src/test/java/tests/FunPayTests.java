@@ -26,10 +26,10 @@ public class FunPayTests extends BaseTest {
     @DisplayName("Check games in FunPay home page")
     public void checkGamesInFunPayHomePage() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        step("open FunPay home page ", ()->{
+        step("open FunPay home page ", () -> {
             fpHome.openHomePage();
         });
-        step(" check game 'AFK ARENA'", ()-> {
+        step(" check game 'AFK ARENA'", () -> {
             fpHome.checkGames(game.afkArena);
         });
 
@@ -51,7 +51,6 @@ public class FunPayTests extends BaseTest {
     void searchFunpayTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
-        fpHome.switchToEn();
         fpHome.searchGame(game.dota2);
         fpHome.gameCLick();
         d2Page.checkTitle(game.d2Title);
@@ -63,7 +62,6 @@ public class FunPayTests extends BaseTest {
     void checkDota2PageWithCalibration() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
-        fpHome.switchToEn();
         fpHome.searchGame(game.dota2);
         fpHome.gameCLick();
         d2Page.choiceCalibration();
@@ -76,7 +74,6 @@ public class FunPayTests extends BaseTest {
     void checkRangeInDota2Page() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
-        fpHome.switchToEn();
         fpHome.searchGame(game.dota2);
         fpHome.gameCLick();
         d2Page.checkRange();
@@ -89,23 +86,24 @@ public class FunPayTests extends BaseTest {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
         fpHome.openHomePage();
-        fpHome.switchToEn();
         fpHome.searchGame(game.dota2);
         fpHome.gameCLick();
 
     }
+
     @Test
     @Tag("situation")
     @DisplayName("Switch currentcy in FunPay home page")
-    void switchcurrencyInHomePage(){
+    void switchcurrencyInHomePage() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
         fpHome.switchCurr();
     }
+
     @Test
     @Tag("situation")
     @DisplayName("Check 'Rules' page FunPay")
-    void checkRulesPageFunPay(){
+    void checkRulesPageFunPay() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
         fpHome.clickRulesPage();
