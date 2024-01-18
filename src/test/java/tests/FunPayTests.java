@@ -63,7 +63,7 @@ public class FunPayTests extends BaseTest {
 
     @Test
     @Tag("smoke")
-    @DisplayName("Check Calibration page in Dota2")
+    @DisplayName("Check Range page in Dota2")
     void checkRangeInDota2Page() {
         fpHome.openHomePage();
         fpHome.switchToEn();

@@ -15,11 +15,11 @@ public class BaseTest {
         Configuration.browserSize = "1920x1060";
         Configuration.pageLoadStrategy = "eager";
         Configuration.pageLoadTimeout = 10000;
-
     }
-@AfterEach
-    void afterEach(){
-    Selenide.closeWebDriver();
-}
+
+    @AfterEach
+    void afterEach() {
+        Selenide.closeWebDriver();
+    }
 
 }

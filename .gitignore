@@ -17,7 +17,7 @@ gradlew
 main
 
 settings.gradle
-notifications
+
 
 ### Logs ###
 *.log
