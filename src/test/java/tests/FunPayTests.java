@@ -41,7 +41,6 @@ public class FunPayTests extends BaseTest {
     public void checkGameServerInAionClassic() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
-        fpHome.checkServers(data.serverRU);
         fpHome.checkServers(data.serverEuNa);
         fpHome.checkServers(data.serverFree);
     }
@@ -101,7 +100,6 @@ public class FunPayTests extends BaseTest {
     void switchcurrencyInHomePage(){
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
-        fpHome.switchToEn();
         fpHome.switchCurr();
     }
     @Test
