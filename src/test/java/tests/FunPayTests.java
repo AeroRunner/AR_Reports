@@ -98,7 +98,7 @@ public class FunPayTests extends BaseTest {
     @Test
     @Tag("situation")
     @DisplayName("Switch currentcy in FunPay home page")
-    void switch—urrencyInHomePage(){
+    void switchcurrencyInHomePage(){
         SelenideLogger.addListener("allure", new AllureSelenide());
         fpHome.openHomePage();
         fpHome.switchToEn();
