@@ -99,15 +99,4 @@ public class FunPayTests extends BaseTest {
         fpHome.openHomePage();
         fpHome.switchCurr();
     }
-
-    @Test
-    @Tag("situation")
-    @DisplayName("Check 'Rules' page FunPay")
-    void checkRulesPageFunPay() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-        fpHome.openHomePage();
-        fpHome.clickRulesPage();
-        fpHelp.checkRulesTitle(game.rulesTitle);
-    }
-
 }
