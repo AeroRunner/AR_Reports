@@ -51,8 +51,3 @@ task smoke_test(type: Test) {
         includeTags("smoke")
     }
 }
-task situation_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("situation")
-    }
-}

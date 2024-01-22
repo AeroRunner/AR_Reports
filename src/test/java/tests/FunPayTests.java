@@ -106,7 +106,7 @@ public class FunPayTests extends BaseTest {
     }
 
     @Test
-    @Tag("situation")
+    @Tag("smoke")
     @DisplayName("Switch currentcy in FunPay home page")
     void switchcurrencyInHomePage() {
         SelenideLogger.addListener("allure", new AllureSelenide());
