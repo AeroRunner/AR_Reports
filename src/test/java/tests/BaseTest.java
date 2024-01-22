@@ -45,9 +45,9 @@ public class BaseTest {
             Attach.browserConsoleLogs();
         }
         Attach.addVideo();
-//        step("Close Browser", () -> {
-//                    Selenide.closeWebDriver();
-//                }
-//        );
+        step("Close Browser", () -> {
+                    Selenide.closeWebDriver();
+                }
+        );
     }
 }
