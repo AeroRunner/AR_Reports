@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.FunPayDota2Page;
 import pages.FunPayHomePage;
-import pages.FunpayHelpPage;
 import utils.FunPayData;
 import utils.ServersNameData;
 
@@ -19,7 +18,6 @@ public class FunPayTests extends BaseTest {
     ServersNameData data = new ServersNameData();
     FunPayData game = new FunPayData();
     FunPayDota2Page d2Page = new FunPayDota2Page();
-    FunpayHelpPage fpHelp = new FunpayHelpPage();
 
     @Test
     @Tag("smoke")

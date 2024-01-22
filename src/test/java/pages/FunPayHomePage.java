@@ -12,7 +12,6 @@ public class FunPayHomePage {
     SelenideElement promoGames = $(".promo-game-list"),
             serchField = $("[name='query']"),
             gameChoice = $("[href='https://funpay.com/en/lots/81/']"),
-            rulesPage = $("[href='https://funpay.com/en/trade/info']"),
             currencyDropDown = $(".dropdown-toggle.menu-item-currencies"),
             choiseRUB = $(".user-cy-switcher.menu-item-currency");
 
@@ -42,11 +41,6 @@ public class FunPayHomePage {
 
     public FunPayHomePage gameCLick() {
         gameChoice.click();
-        return this;
-    }
-
-    public FunPayHomePage clickRulesPage() {
-        rulesPage.click();
         return this;
     }
 
