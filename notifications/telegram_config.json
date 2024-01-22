@@ -2,7 +2,7 @@
   "base": {
     "project": "",
     "environment": "Selenoid, Chrome/Firefox",
-    "comment": "Test notifications for Jenkins",
+    "Комментарий": "Test notifications for Jenkins",
     "reportLink": "",
     "language": "en",
     "messenger": "telegram",
