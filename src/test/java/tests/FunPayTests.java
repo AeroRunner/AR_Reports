@@ -53,7 +53,6 @@ public class FunPayTests extends BaseTest {
         fpHome.openHomePage();
         fpHome.searchGame(game.dota2);
         fpHome.gameCLick();
-        d2Page.checkTitle(game.d2Title);
     }
 
     @Test

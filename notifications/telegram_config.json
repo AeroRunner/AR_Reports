@@ -1,9 +1,9 @@
 {
   "base": {
-    "project": "${JOB_BASE_NAME}",
+    "project": "",
     "environment": "Selenoid, Chrome/Firefox",
     "comment": "Test notifications for Jenkins",
-    "reportLink": "${BUILD_URL}",
+    "reportLink": "",
     "language": "en",
     "messenger": "telegram",
     "allureFolder": "allure-report",
