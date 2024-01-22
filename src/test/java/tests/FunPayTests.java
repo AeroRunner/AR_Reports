@@ -30,7 +30,6 @@ public class FunPayTests extends BaseTest {
         step(" check game 'AFK ARENA'", () -> {
             fpHome.checkGames(game.afkArena);
         });
-
     }
 
     @Test
@@ -38,9 +37,15 @@ public class FunPayTests extends BaseTest {
     @DisplayName("Choice game server AionClassic")
     public void checkGameServerInAionClassic() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        fpHome.openHomePage();
-        fpHome.checkServers(data.serverEuNa);
-        fpHome.checkServers(data.serverFree);
+        step("open FunPay home page ", () -> {
+            fpHome.openHomePage();
+        });
+        step("checking server availability (EU,NA)", () -> {
+            fpHome.checkServers(data.serverEuNa);
+        });
+        step("checking server availability (Free)", () -> {
+            fpHome.checkServers(data.serverFree);
+        });
     }
 
     @Test
@@ -48,9 +53,15 @@ public class FunPayTests extends BaseTest {
     @DisplayName("Check Dota2 Page after search 'Dota2' ")
     void searchFunpayTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        fpHome.openHomePage();
-        fpHome.searchGame(game.dota2);
-        fpHome.gameCLick();
+        step("Open FunPay home page", () -> {
+            fpHome.openHomePage();
+        });
+        step("writing a query(Dota2) in the search field", () -> {
+            fpHome.searchGame(game.dota2);
+        });
+        step("Select a game from the drop-down list", () -> {
+            fpHome.gameCLick();
+        });
     }
 
     @Test
@@ -58,34 +69,40 @@ public class FunPayTests extends BaseTest {
     @DisplayName("Check Calibration page in page 'Dota2' ")
     void checkDota2PageWithCalibration() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        fpHome.openHomePage();
-        fpHome.searchGame(game.dota2);
-        fpHome.gameCLick();
-        d2Page.choiceCalibration();
-        d2Page.checkCalibrationPage(game.d2CalibrTitle);
+        step("open FunPay home page ", () -> {
+            fpHome.openHomePage();
+        });
+        step("writing a query(Dota2) in the search field", () -> {
+            fpHome.searchGame(game.dota2);
+        });
+        step("Select a game from the drop-down list", () -> {
+            fpHome.gameCLick();
+        });
+        step("select the 'Calibration' section on the game page", () -> {
+            d2Page.choiceCalibration();
+        });
+        step("Check the section name (Calibration)", () -> {
+            d2Page.checkCalibrationPage(game.d2CalibrTitle);
+        });
     }
 
     @Test
     @Tag("smoke")
-    @DisplayName("Check Range page in Dota2")
+    @DisplayName("The product field on the game page should not be empty")
     void checkRangeInDota2Page() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        fpHome.openHomePage();
-        fpHome.searchGame(game.dota2);
-        fpHome.gameCLick();
-        d2Page.checkRange();
-    }
-
-    @Test
-    @Tag("smoke")
-    @DisplayName("Check payment method in Lot page")
-    void checkPaymentMethod() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
-
-        fpHome.openHomePage();
-        fpHome.searchGame(game.dota2);
-        fpHome.gameCLick();
-
+        step("open FunPay home page ", () -> {
+            fpHome.openHomePage();
+        });
+        step("writing a query(Dota2) in the search field", () -> {
+            fpHome.searchGame(game.dota2);
+        });
+        step("Select a game from the drop-down list", () -> {
+            fpHome.gameCLick();
+        });
+        step("Checking the product field", () -> {
+            d2Page.checkRange();
+        });
     }
 
     @Test
@@ -93,7 +110,11 @@ public class FunPayTests extends BaseTest {
     @DisplayName("Switch currentcy in FunPay home page")
     void switchcurrencyInHomePage() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-        fpHome.openHomePage();
-        fpHome.switchCurr();
+        step("open FunPay home page ", () -> {
+            fpHome.openHomePage();
+        });
+        step("Switch currently in home page", () -> {
+            fpHome.switchCurr();
+        });
     }
 }
