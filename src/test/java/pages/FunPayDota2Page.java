@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class FunPayDota2Page {
 
-    SelenideElement title = $(".content-with-cd"),
+   private final SelenideElement
             calibrationPage = $("[href='https://funpay.com/en/lots/500/']"),
-            calibrationTitle = $(".content-with-cd"),
+            d2Title = $(".content-with-cd"),
             rangePageDota2 = $(".with-tbl-footer");
 
     public FunPayDota2Page choiceCalibration() {
@@ -18,8 +18,8 @@ public class FunPayDota2Page {
         return this;
     }
 
-    public FunPayDota2Page checkCalibrationPage(String title) {
-        calibrationTitle.shouldHave(text(title));
+    public FunPayDota2Page checkTitlePage(String title) {
+        d2Title.shouldHave(text(title));
         return this;
     }
 

@@ -28,7 +28,6 @@ public class BaseTest {
             Configuration.browserSize = System.getProperty("size", "1920x1080");
             Configuration.baseUrl = System.getProperty("baseUrl", "https://funpay.com/");
             Configuration.pageLoadStrategy = "eager";
-            Configuration.timeout = 10000;
             Configuration.browserVersion = System.getProperty("version", "100");
             Configuration.browser = System.getProperty("browser", "chrome");
             Configuration.browserCapabilities = capabilities;

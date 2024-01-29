@@ -23,7 +23,7 @@ public class FunPayTests extends BaseTest {
     @Tag("smoke")
     @DisplayName("Check games in FunPay home page")
     public void checkGamesInFunPayHomePage() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
         step("Open FunPay home page ", () -> {
             fpHome.openHomePage();
         });
@@ -36,7 +36,7 @@ public class FunPayTests extends BaseTest {
     @Tag("smoke")
     @DisplayName("Choice game server AionClassic")
     public void checkGameServerInAionClassic() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
         step("Open FunPay home page ", () -> {
             fpHome.openHomePage();
         });
@@ -52,7 +52,7 @@ public class FunPayTests extends BaseTest {
     @Tag("smoke")
     @DisplayName("Check Dota2 Page after search 'Dota2' ")
     void searchFunpayTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
         step("Open FunPay home page", () -> {
             fpHome.openHomePage();
         });
@@ -62,13 +62,17 @@ public class FunPayTests extends BaseTest {
         step("Select a game from the drop-down list", () -> {
             fpHome.gameCLick();
         });
+        step("Check Dota 2 first page", ()->{
+            d2Page.checkTitlePage(game.d2FirstPage);
+        });
+
     }
 
     @Test
     @Tag("smoke")
     @DisplayName("Check Calibration page in page 'Dota2' ")
     void checkDota2PageWithCalibration() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
         step("Open FunPay home page ", () -> {
             fpHome.openHomePage();
         });
@@ -82,7 +86,7 @@ public class FunPayTests extends BaseTest {
             d2Page.choiceCalibration();
         });
         step("Check the section name (Calibration)", () -> {
-            d2Page.checkCalibrationPage(game.d2CalibrTitle);
+            d2Page.checkTitlePage(game.d2CalibrTitle);
         });
     }
 
@@ -90,7 +94,7 @@ public class FunPayTests extends BaseTest {
     @Tag("smoke")
     @DisplayName("The product field on the game page should not be empty")
     void checkRangeInDota2Page() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
         step("Open FunPay home page ", () -> {
             fpHome.openHomePage();
         });
@@ -109,12 +113,15 @@ public class FunPayTests extends BaseTest {
     @Tag("smoke")
     @DisplayName("Switch currentcy in FunPay home page")
     void switchcurrencyInHomePage() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
         step("Open FunPay home page ", () -> {
             fpHome.openHomePage();
         });
         step("Switch currently in home page", () -> {
             fpHome.switchCurr();
+        });
+        step("Check USD currency", ()-> {
+            fpHome.checkCurr(game.currencyName);
         });
     }
 }

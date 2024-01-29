@@ -9,11 +9,12 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
 public class FunPayHomePage {
-    SelenideElement promoGames = $(".promo-game-list"),
-            serchField = $("[name='query']"),
+   private final  SelenideElement promoGames = $(".promo-game-list"),
+            searchField = $("[name='query']"),
             gameChoice = $("[href='https://funpay.com/en/lots/81/']"),
             currencyDropDown = $(".dropdown-toggle.menu-item-currencies"),
-            choiseRUB = $(".user-cy-switcher.menu-item-currency");
+            choiceRUB = $(".user-cy-switcher.menu-item-currency"),
+            currencyTable = $(".dropdown-toggle.menu-item-currencies");
 
     public FunPayHomePage openHomePage() {
         Selenide.open("");
@@ -35,7 +36,7 @@ public class FunPayHomePage {
     }
 
     public FunPayHomePage searchGame(String game) {
-        serchField.setValue(game);
+        searchField.setValue(game);
         return this;
     }
 
@@ -46,7 +47,11 @@ public class FunPayHomePage {
 
     public FunPayHomePage switchCurr() {
         currencyDropDown.click();
-        choiseRUB.click();
+        choiceRUB.click();
+        return this;
+    }
+    public FunPayHomePage checkCurr(String currency){
+        currencyTable.shouldHave(text(currency));
         return this;
     }
 
