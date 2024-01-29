@@ -102,7 +102,7 @@ ${Task}
 <img title="Test Results in Alure TestOps" src="mediaReadme/screens/TestOpsSteps.png">
 </p>
 
-## <img width="7%" style="vertical-align:middle" title="Jira" src="mediaReadme/logo/Jira.svg"> Jira: выведение результатов в таски
+## <img width="7%" style="vertical-align:middle" title="Jira" src="mediaReadme/logo/Jira.svg"> Jira : выведение результатов в таски
 
 При помощи интеграции <code>Allure TestOps</code> и <code>Jira</code>, в таску можно отобразить существующие в проекте тест-кейсы и результаты их запуска.
 
