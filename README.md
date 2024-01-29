@@ -7,9 +7,9 @@
 - [Запуск автотестов](#arrow_forward-запуск-автотестов)
 - [Сборка в Jenkins](#-Автоматическая-сборка-в-Jenkins)
 - [Пример Allure-отчета](#-пример-allure-отчета)
-- [Интеграция с Allure TestOps](#-Allure-TestOps-обзор-результатов-проекта)
+- [Интеграция с Allure TestOps](#-Обзор-результатов-проекта-с-Allure-TestOps)
 - [Интеграция с Jira](#-Jira-выведение-результатов-в-таски)
-- [Уведомления в Telegram](#-Telegram-:-отчётность-при-помощи-бота)
+- [Уведомления в Telegram](#-Telegram--отчётность-при-помощи-бота)
 - [Видео примера запуска тестов в Selenoid](#-Selenoid-:-Видео-прохождения-теста-в-отчете)
 
 ## :computer: Используемый стек
@@ -82,7 +82,7 @@ ${Task}
 <img title="Allure Overview" src="mediaReadme/screens/AllureReport.png">
 </p>
 
-## <img width="7%" style="vertical-align:middle" title="Allure TestOps" src="mediaReadme/logo/AllureTestOps.svg"> Allure TestOps обзор результатов проекта
+## <img width="7%" style="vertical-align:middle" title="Allure TestOps" src="mediaReadme/logo/AllureTestOps.svg"> Обзор результатов проекта с Allure TestOps
 
 На *Dashboard* в <code>TestOps</code> видна статистика тестов в общем : 
 * Сколько прошли успешно
